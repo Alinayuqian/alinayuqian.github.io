@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose an Option</h1>
+  
+  <!-- Option 1: Redirect to another website -->
+  <button onclick="window.location.href='https://malmo.se/Uppleva-och-gora/Konst-och-museer/Malmo-museum/Utstallningar/Aktuella-utstallningar/Utstallningar-om-Malmohus-slott.html'">Go to Website</button>
+  
+  <!-- Option 2: Play a voice clip -->
+  <button onclick="playAudio()">Play Voice</button>
+  <audio id="audio" src="your-audio-file.mp3" preload="auto"></audio>
+
+  <script>
+    function playAudio() {
+      var audio = document.getElementById('audio');
+      audio.play();
+    }
+  </script>
+</body>
+</html>
