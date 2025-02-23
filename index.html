@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malmo Museum Audio Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 18px;
+            color: white;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .museum-map {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Choose an Option</h1>
-  
-  <!-- Option 1: Redirect to another website -->
-  <button onclick="window.location.href='https://malmo.se/Uppleva-och-gora/Konst-och-museer/Malmo-museum/Utstallningar/Aktuella-utstallningar/Utstallningar-om-Malmohus-slott.html'">Go to Website</button>
-  
-  <!-- Option 2: Play a voice clip -->
-  <button onclick="playAudio()">Play Voice</button>
-  <audio id="audio" src="your-audio-file.mp3" preload="auto"></audio>
-
-  <script>
-    function playAudio() {
-      var audio = document.getElementById('audio');
-      audio.play();
-    }
-  </script>
+    <div class="container">
+        <h1>Malmö Castle Map Introduction</h1>
+        <p>Welcome to Malmö Castle! This map will guide you through the historic corridors and rooms of this 16th-century castle. The map highlights key areas such as the castle's exhibitions, the prison, and the tower. Each section is clearly marked to help you navigate and explore the rich history of Malmö Castle.</p>
+        
+        <button class="btn" onclick="window.location.href='https://malmo.se/Uppleva-och-gora/Konst-och-museer/Malmo-museum/Utstallningar/Aktuella-utstallningar/Utstallningar-om-Malmohus-slott.html'">
+            Visit Museum Website
+        </button>
+        
+        <button class="btn" onclick="playAudio()">
+            Play Audio Guide
+        </button>
+        
+        <img src="malmo-museum-map.jpg" alt="Map of Malmo Museum" class="museum-map">
+        
+        <audio id="audio" src="your-audio-file.mp3" preload="auto"></audio>
+    </div>
+    
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
+
