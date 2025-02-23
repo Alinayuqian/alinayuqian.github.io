@@ -1,74 +1,100 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malmo Museum Audio Guide</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 40px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            margin: auto;
-        }
-        h1 {
-            color: #333;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            margin: 15px 0;
-            padding: 12px;
-            font-size: 18px;
-            color: white;
-            background: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-        .museum-map {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malmö Castle - The Map</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #0056b3;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      padding: 12px;
+      font-size: 18px;
+      color: white;
+      background: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    .map-container {
+      margin-top: 20px;
+    }
+    .map-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px; /* Adds space between the two images */
+    }
+    .contact-info {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .contact-info a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Malmö Castle Map Introduction</h1>
-        <p>Welcome to Malmö Castle! This map will guide you through the historic corridors and rooms of this 16th-century castle. The map highlights key areas such as the castle's exhibitions, the prison, and the tower. Each section is clearly marked to help you navigate and explore the rich history of Malmö Castle.</p>
-        
-        <button class="btn" onclick="window.location.href='https://malmo.se/Uppleva-och-gora/Konst-och-museer/Malmo-museum/Utstallningar/Aktuella-utstallningar/Utstallningar-om-Malmohus-slott.html'">
-            Visit Museum Website
-        </button>
-        
-        <button class="btn" onclick="playAudio()">
-            Play Audio Guide
-        </button>
-        
-        <img src="malmo-museum-map.jpg" alt="Map of Malmo Museum" class="museum-map">
-        
-        <audio id="audio" src="your-audio-file.mp3" preload="auto"></audio>
-    </div>
+  <div class="container">
+    <h1>Malmö Castle - The Map</h1>
     
-    <script>
-        function playAudio() {
-            var audio = document.getElementById('audio');
-            audio.play();
-        }
-    </script>
+    <!-- Buttons placed under the title -->
+    <button class="btn" onclick="window.location.href='https://malmo.se/Uppleva-och-gora/Konst-och-museer/Malmo-museum/Utstallningar/Aktuella-utstallningar/Utstallningar-om-Malmohus-slott.html'">
+      Visit Museum Website
+    </button>
+    
+    <button class="btn" onclick="playAudio()">
+      Play Audio Guide
+    </button>
+
+    <!-- Map images added here -->
+    <div class="map-container">
+      <img src="Map front.png" alt="Map of Malmö Castle - Part 1">
+      <img src="Map Universal Design.jpg" alt="Map of Malmö Castle - Part 2">
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:malmomuseum@malmo.se">malmomuseum@malmo.se</a><br>
+      Phone: 040-34000<br>
+      Address: Malmöhusvägen 6, 21118 Malmö</p>
+    </div>
+  </div>
+
+  <script>
+    function playAudio() {
+      var audio = new Audio('AudioIntro.mp3');
+      audio.play();
+    }
+  </script>
 </body>
 </html>
-
